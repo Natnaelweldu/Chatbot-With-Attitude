@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nate</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="chat-wrapper">
+      <header class="chat-header">
+        <div class="status-dot"></div>
+        <h3>Nate 😶‍🌫️</h3>
+      </header>
+
+      <div class="chat-history canvas-bg">
+        <!-- <div class="msg incoming">Welcome! How can I help you today?</div>
+            <div class="msg outgoing">I'd like to make this UI look more engaging.</div>
+            <div class="msg incoming">Adding a gradient and some texture usually does the trick!</div> -->
+      </div>
+
+      <div class="chat-controls">
+        <form id="message-form">
+          <input id="user-text" type="text" placeholder="Type a message..." />
+          <button id="submit-btn" type="submit">
+            <svg
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <line x1="22" y1="2" x2="11" y2="13"></line>
+              <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+            </svg>
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <script type="module" src="script.js"></script>
+  </body>
+</html>
