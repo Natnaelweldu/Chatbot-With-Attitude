@@ -20,9 +20,9 @@
       </div>
 
       <div class="chat-controls">
-        <form id="message-form">
+        <form id="message-form" onsubmit="setTimeout(() => this.reset(), 1)">
           <input id="user-text" type="text" placeholder="Type a message..." />
-          <button id="submit-btn" type="submit">
+          <button id="submit-btn" type="submit"">
             <svg
               width="20"
               height="20"

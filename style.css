@@ -5,7 +5,7 @@
     font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
 }
 
-/* 1. Dynamic Page Background */
+
 body {
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     display: flex;
