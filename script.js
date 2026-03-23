@@ -67,7 +67,7 @@ async function askChatbot(message) {
 
   try {
     const response = await fetch(
-      `http://127.0.0.1:8000/chat?user_message=${encodeURIComponent(message)}`,
+      `https://chatbot-with-attitude-czy0.onrender.com/chat?user_message=${encodeURIComponent(message)}`,
       { method: "POST" }
     );
 
@@ -90,7 +90,7 @@ async function askChatbot(message) {
 
 async function getHistory() {
   try {
-    const res = await fetch("http://127.0.0.1:8000/history");
+    const res = await fetch("https://chatbot-with-attitude-czy0.onrender.com/history");
     chatHistory = await res.json();
     chat.replaceChildren();
     
