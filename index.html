@@ -13,16 +13,18 @@
         <h3>Nate 😶‍🌫️</h3>
       </header>
 
-      <div class="chat-history canvas-bg">
-        <!-- <div class="msg incoming">Welcome! How can I help you today?</div>
-            <div class="msg outgoing">I'd like to make this UI look more engaging.</div>
-            <div class="msg incoming">Adding a gradient and some texture usually does the trick!</div> -->
-      </div>
+      <div class="chat-history canvas-bg"></div>
 
       <div class="chat-controls">
-        <form id="message-form" onsubmit="setTimeout(() => this.reset(), 1)">
-          <input id="user-text" type="text" placeholder="Type a message..." />
-          <button id="submit-btn" type="submit"">
+        <form id="message-form">
+          <input
+            id="user-text"
+            type="text"
+            placeholder="Talk to Nate..."
+            autocomplete="off"
+            required
+          />
+          <button id="submit-btn" type="submit">
             <svg
               width="20"
               height="20"
