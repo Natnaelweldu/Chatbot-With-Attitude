@@ -3,14 +3,14 @@ services:
     name: chatbot-with-attitude
     runtime: python
     plan: free
-    # Tells Render to look inside your backend folder
-    rootDirectory: backend
-    # Modern 'uv' way - Render detects uv.lock and handles the rest
+    region: oregon
+    # CORRECTED KEY: use rootDir instead of rootDirectory
+    rootDir: backend
+    # Best way for 'uv' users
     buildCommand: uv sync
-    # Starts your FastAPI app
     startCommand: uv run uvicorn main:app --host 0.0.0.0 --port $PORT
     envVars:
       - key: GROQ_API_KEY
         sync: false
       - key: PYTHON_VERSION
-        value: 3.12 # Matches your .python-version file
+        value: 3.12
