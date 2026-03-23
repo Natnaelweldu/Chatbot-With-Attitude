@@ -4,13 +4,14 @@ services:
     runtime: python
     plan: free
     region: oregon
-    # CORRECTED KEY: use rootDir instead of rootDirectory
+    # Tells Render your code is in the backend folder
     rootDir: backend
-    # Best way for 'uv' users
-    buildCommand: uv sync
-    startCommand: uv run uvicorn main:app --host 0.0.0.0 --port $PORT
+    # Installs uv first, then uses it to install your dependencies
+    buildCommand: "pip install uv && uv sync"
+    # UPDATED: Points to api.py instead of main.py
+    startCommand: "uv run uvicorn api:app --host 0.0.0.0 --port $PORT"
     envVars:
+      - key: PYTHON_VERSION
+        value: 3.12.0
       - key: GROQ_API_KEY
         sync: false
-      - key: PYTHON_VERSION
-        value: 3.12
