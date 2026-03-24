@@ -84,7 +84,7 @@ async function askChatbot(message) {
     }, 50);
 
   } catch (e) {
-    aiTextElement.textContent = "Error: Nate is offline.";
+    aiTextElement.textContent = "Nate is waking up... Please wait about 30 seconds and try again!";
   }
 }
 
